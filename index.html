@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <title>แคปชั่นไหนดี — แคปชั่นไทยพร้อมโพสต์ กวนๆ รัก เที่ยว กิน งาน เงิน</title>
+  <meta name="description" content="คิดแคปชั่นไม่ออก? เลือกโมเมนต์และสไตล์ แล้วรับ 3 แคปชั่นไทยพร้อมโพสต์ สำหรับ IG TikTok Facebook และ Threads">
+  <meta property="og:title" content="แคปชั่นไหนดี — รูปพร้อมแล้ว เหลือแค่แคปชั่น">
+  <meta property="og:description" content="เลือกโมเมนต์ + สไตล์ แล้วรับ 3 แคปชั่นไทยพร้อมโพสต์">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <nav class="nav">
+      <a class="brand" href="index.html">แคปชั่นไหนดี<span>?</span></a>
+      <span class="nav-note">Thai-first • ฟรี • ไม่ต้องสมัคร</span>
+    </nav>
+
+    <header class="hero">
+      <div class="eyebrow">CAPTION FOR YOUR MOMENT</div>
+      <h1>รูปพร้อมแล้ว<br><span>เหลือแค่แคปชั่น</span></h1>
+      <p>เลือกโมเมนต์ เลือกสไตล์ แล้วรับ <strong>3 ตัวเลือกพร้อมโพสต์</strong> ในไม่กี่วินาที</p>
+      <div class="trust-row"><span>ภาษาไทยธรรมชาติ</span><span>ก๊อปได้ทันที</span><span>แชร์ต่อได้</span></div>
+    </header>
+
+    <section class="generator card" aria-labelledby="generator-title">
+      <div class="section-kicker">1 / 3</div>
+      <div class="field">
+        <label id="generator-title">ตอนนี้กำลังโพสต์เรื่องอะไร?</label>
+        <div id="topics" class="chips topic-chips"></div>
+      </div>
+
+      <div class="section-kicker">2 / 3</div>
+      <div class="field">
+        <label>อยากได้ฟีลไหน?</label>
+        <div id="tones" class="chips"></div>
+      </div>
+
+      <div class="section-kicker">3 / 3</div>
+      <div class="field split-field">
+        <div>
+          <label>โพสต์ที่ไหน? <span>เลือกไว้ให้เหมาะกับแพลตฟอร์ม</span></label>
+          <div id="platforms" class="chips"></div>
+        </div>
+        <div>
+          <label for="context">มีบริบทเพิ่มไหม? <span>ไม่ใส่ก็ได้</span></label>
+          <input id="context" maxlength="90" placeholder="เช่น รูปทะเลหัวหิน, วันศุกร์เลิกงาน, เพิ่งได้เงินเดือน">
+        </div>
+      </div>
+
+      <button id="generate" class="primary">คิดแคปชั่นให้หน่อย <span>→</span></button>
+    </section>
+
+    <section class="result-wrap" aria-live="polite">
+      <div class="result-heading">
+        <div>
+          <span class="pill dark">3 ตัวเลือก</span>
+          <h2>เลือกอันที่เป็นคุณที่สุด</h2>
+        </div>
+        <button id="refresh" class="ghost">↻ ลองชุดใหม่</button>
+      </div>
+      <div id="results" class="results-grid"></div>
+      <p class="disclaimer">หมวดลงทุน/การเงินมีไว้เพื่อคอนเทนต์และความบันเทิง ไม่ใช่คำแนะนำทางการเงิน</p>
+    </section>
+
+    <section class="discover">
+      <div class="discover-head">
+        <div>
+          <div class="eyebrow">POPULAR MOMENTS</div>
+          <h2>เริ่มจากโมเมนต์ที่คนใช้บ่อย</h2>
+        </div>
+        <p>ไม่ต้องคิด keyword เอง เลือกสถานการณ์แล้วไปต่อได้เลย</p>
+      </div>
+      <div class="category-grid">
+        <a href="caption-funny.html"><span>😂</span><b>กวนๆ / ฮาๆ</b><small>ใช้ได้แทบทุกโพสต์</small></a>
+        <a href="caption-love.html"><span>💘</span><b>รัก / โสด / อ่อย</b><small>หวานก็ได้ กวนก็ดี</small></a>
+        <a href="caption-food.html"><span>☕</span><b>กิน / คาเฟ่</b><small>ของกิน รูปกาแฟ ร้านใหม่</small></a>
+        <a href="caption-travel.html"><span>🌊</span><b>เที่ยว / วันหยุด</b><small>ทะเล ภูเขา พักผ่อน</small></a>
+        <a href="caption-work.html"><span>💼</span><b>งาน / มนุษย์เงินเดือน</b><small>วันจันทร์ OT เงินเดือนออก</small></a>
+        <a href="caption-money.html"><span>💸</span><b>เงิน / ออม / ลงทุน</b><small>DNA เดิมที่ยังเก็บไว้</small></a>
+      </div>
+    </section>
+
+    <section class="positioning card">
+      <div>
+        <div class="eyebrow">WHY THIS EXISTS</div>
+        <h2>ไม่ใช่แค่ “สุ่มคำคม”</h2>
+      </div>
+      <p>เราเริ่มจาก <strong>โมเมนต์จริงที่คนกำลังจะโพสต์</strong> แล้วค่อยปรับโทนและแพลตฟอร์มให้เหมาะ เพื่อให้ได้ประโยคที่หยิบไปใช้ได้ทันทีมากกว่าแคปชั่นทั่วไป</p>
+    </section>
+
+    <footer>
+      <b>แคปชั่นไหนดี?</b>
+      <span>ทำให้การคิดแคปชั่นเป็นเรื่อง 10 วินาที</span>
+    </footer>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
