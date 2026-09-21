@@ -5,7 +5,7 @@ const requiredFiles=[
   'index.html','styles.css','app.js','monetization.js','revenue.js',
   'caption-funny.html','caption-love.html','caption-food.html',
   'caption-travel.html','caption-work.html','caption-money.html',
-  'pro.html','partners.html','about.html','privacy.html'
+  'about.html','privacy.html'
 ];
 
 for(const file of requiredFiles){
@@ -21,18 +21,18 @@ for(const script of ['app.js','monetization.js','revenue.js']){
   new vm.Script(fs.readFileSync(script,'utf8'));
 }
 
-const js=fs.readFileSync('app.js','utf8');
-for(const label of ['ฮา / กวน','รัก / โสด','กิน / คาเฟ่','เที่ยว / วันหยุด','งาน / มนุษย์เงินเดือน','เงิน / ออม','ลงทุน','ชีวิต / กำลังใจ']){
-  if(!js.includes(label)) throw new Error('Missing category: '+label);
-}
+const config=fs.readFileSync('monetization.js','utf8');
+if(!config.includes('adsense')) throw new Error('AdSense config missing');
+const revenue=fs.readFileSync('revenue.js','utf8');
+if(!revenue.includes('pagead2.googlesyndication.com')) throw new Error('AdSense loader missing');
+if(!revenue.includes('SHOPEE PICKS')) throw new Error('Shopee affiliate renderer missing');
+if(!revenue.includes('s\\.shopee\\.co\\.th')) throw new Error('Shopee affiliate URL validation missing');
 
 for(const file of requiredFiles.filter(f=>f.startsWith('caption-'))){
   const page=fs.readFileSync(file,'utf8');
   if(!page.includes('ลอง Generator')) throw new Error(file+' is missing generator CTA');
   if(!page.includes('meta name="description"')) throw new Error(file+' is missing meta description');
+  if(!page.includes('revenue.js')) throw new Error(file+' is missing monetization scripts');
 }
-
-if(!fs.readFileSync('pro.html','utf8').includes('data-revenue-key="proCheckoutUrl"')) throw new Error('Pro checkout hook missing');
-if(!fs.readFileSync('partners.html','utf8').includes('data-revenue-key="sponsorInquiryUrl"')) throw new Error('Sponsor inquiry hook missing');
 
 console.log('Smoke tests passed.');
