@@ -25,7 +25,7 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p _site
-          cp index.html styles.css app.js caption-*.html robots.txt sitemap.xml .nojekyll _site/
+          cp index.html styles.css app.js monetization.js revenue.js caption-*.html pro.html partners.html about.html privacy.html robots.txt sitemap.xml .nojekyll _site/
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
