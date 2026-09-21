@@ -1,75 +1,75 @@
-# Monetization V1
+# Monetization — AdSense + Shopee Affiliate
 
-## Goal
+## Business model
 
-Get the first real revenue before building subscriptions, accounts, or a heavy AI backend.
+The site stays free. Revenue comes from:
 
-## Revenue ladder
+1. Google AdSense for broad pageview monetization.
+2. Shopee Affiliate links for contextual product recommendations.
 
-### 1. Creator Pack Pro — ฿149 one-time
+There is no paid Creator Pack, subscription, or sponsor funnel in V1.
 
-Target: creators and small businesses who have to publish repeatedly.
+## Google AdSense
 
-Founder V1 asset exists privately and contains:
-- 120 Thai captions
-- 82 hooks
-- 50 CTAs
-- 30-day content calendar
+Google requires original, useful content that follows publisher policies. Approval is not guaranteed.
 
-The public sales page is `pro.html`.
+### Activation
 
-To activate checkout:
-1. Create a Stripe Payment Link for ฿149.
-2. Prefer enabling PromptPay for Thai buyers.
-3. Put the URL into `monetization.js > proCheckoutUrl`.
+1. Apply for AdSense with the live site.
+2. Add the site in AdSense and complete verification.
+3. Copy your publisher ID, e.g. `ca-pub-1234567890123456`.
+4. Put it in `monetization.js > adsense.client`.
+5. If Google asks for ads.txt, copy the exact line from AdSense to a new root-level `ads.txt` file.
 
-Do not commit customer data or Stripe secrets. Payment Links require only a public checkout URL.
+Auto Ads is the default approach because one code snippet can monetize all pages and adapt to layout changes.
 
-### 2. Founding Partner / Sponsor
+## Shopee Affiliate
 
-Public offer: `partners.html`
+Only use real Shopee Affiliate links in the modern format:
 
-Validation pricing:
-- Category Partner: ฿990 / 30 days
-- Homepage Partner: ฿1,990 / 30 days
-- Branded Caption Pack: ฿2,900 / campaign
+`https://s.shopee.co.th/...`
 
-Sponsor inquiry currently routes to a pre-filled GitHub issue so the offer can be tested without building CRM infrastructure.
+Regular Shopee links do not necessarily earn commission.
 
-### 3. Affiliate
+### Activation
 
-Recommended platform to test first: Involve Asia because it explicitly supports website owners/publishers.
+1. Join Shopee Affiliate Thailand and complete account/channel verification.
+2. Convert selected product URLs inside Shopee Affiliate.
+3. Paste approved affiliate URLs into `monetization.js`.
+4. Affiliate recommendation cards stay completely hidden until a valid `s.shopee.co.th` URL exists.
 
-Only place affiliate offers where product intent is natural:
-- creator gear for Creator Pro visitors
-- travel products on travel pages
-- lifestyle/food offers on relevant pages
+### Placement strategy
 
-Configure approved tracking URLs in `monetization.js`. Never disguise affiliate links; disclose them.
+Recommendations are contextual rather than a generic storefront:
 
-### 4. Display ads — later
+- cafe/food → phone stand, portable light, tumbler
+- travel → phone tripod, packing organizers, power bank
+- work → laptop stand, mouse/keyboard, desk organization
+- love → gift ideas and photo props
+- money/investing → work setup and books
 
-AdSense is not the V1 revenue dependency. Apply only after:
-- meaningful organic search traffic
-- stronger original editorial content
-- About + Privacy + navigation are established
-- pages have real utility beyond thin lists
+Do not place unrelated products just because commission is higher.
 
-Thailand is supported by AdSense, but approval is not guaranteed.
+## Measurement
 
-## North-star revenue metrics
+AdSense:
+- Page RPM
+- ad impressions
+- viewability
+- revenue by landing page
 
-Before optimizing traffic volume, track:
-- Paid orders / 1,000 sessions
-- Revenue / 1,000 sessions
-- Pro page view → checkout click rate
-- Sponsor inquiries / month
-- Affiliate outbound clicks and EPC once activated
+Shopee Affiliate:
+- outbound clicks
+- click-through rate by category
+- completed orders
+- earnings per click
+- commission by product/category
 
 ## Guardrails
 
-- Free generator stays genuinely useful.
-- Paid placement never changes generated caption results.
-- Sponsored and affiliate content must be labeled.
-- Do not add subscriptions before one-time purchase demand is proven.
-- Do not build payment infrastructure when Payment Links can validate demand first.
+- Free generator remains fully usable.
+- Affiliate links are explicitly disclosed.
+- Generated captions never change because of commercial relationships.
+- Never click your own ads.
+- Do not publish fake affiliate links or ordinary Shopee links as if they earn commission.
+- Keep Privacy & Affiliate Disclosure accurate when monetization services change.
