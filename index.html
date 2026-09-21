@@ -14,7 +14,7 @@
   <main class="shell">
     <nav class="nav">
       <a class="brand" href="index.html">แคปชั่นไหนดี<span>?</span></a>
-      <span class="nav-note">Thai-first • ฟรี • ไม่ต้องสมัคร</span>
+      <div class="nav-links"><a href="pro.html">Creator Pro</a><a href="partners.html">สำหรับแบรนด์</a></div>
     </nav>
 
     <header class="hero">
@@ -30,13 +30,11 @@
         <label id="generator-title">ตอนนี้กำลังโพสต์เรื่องอะไร?</label>
         <div id="topics" class="chips topic-chips"></div>
       </div>
-
       <div class="section-kicker">2 / 3</div>
       <div class="field">
         <label>อยากได้ฟีลไหน?</label>
         <div id="tones" class="chips"></div>
       </div>
-
       <div class="section-kicker">3 / 3</div>
       <div class="field split-field">
         <div>
@@ -48,28 +46,32 @@
           <input id="context" maxlength="90" placeholder="เช่น รูปทะเลหัวหิน, วันศุกร์เลิกงาน, เพิ่งได้เงินเดือน">
         </div>
       </div>
-
       <button id="generate" class="primary">คิดแคปชั่นให้หน่อย <span>→</span></button>
     </section>
 
     <section class="result-wrap" aria-live="polite">
       <div class="result-heading">
-        <div>
-          <span class="pill dark">3 ตัวเลือก</span>
-          <h2>เลือกอันที่เป็นคุณที่สุด</h2>
-        </div>
+        <div><span class="pill dark">3 ตัวเลือก</span><h2>เลือกอันที่เป็นคุณที่สุด</h2></div>
         <button id="refresh" class="ghost">↻ ลองชุดใหม่</button>
       </div>
       <div id="results" class="results-grid"></div>
       <p class="disclaimer">หมวดลงทุน/การเงินมีไว้เพื่อคอนเทนต์และความบันเทิง ไม่ใช่คำแนะนำทางการเงิน</p>
     </section>
 
+    <section class="revenue-strip">
+      <article class="revenue-card pro">
+        <div><div class="eyebrow">FOR CREATORS</div><h2>ต้องโพสต์บ่อย? ไม่ควรเริ่มจากศูนย์ทุกครั้ง</h2><p>Creator Pack Pro รวม Caption + Hook + CTA + 30-Day Content Calendar สำหรับคนที่ทำคอนเทนต์จริงจัง</p></div>
+        <div class="revenue-side"><strong>฿149</strong><span>ซื้อครั้งเดียว</span><a href="pro.html">ดู Creator Pack →</a></div>
+      </article>
+      <article class="revenue-card sponsor">
+        <div><div class="eyebrow">FOR BRANDS</div><h2>แบรนด์ที่อยากเข้าถึงคนตอนกำลังสร้างโพสต์</h2><p>เปิด Founding Partner แบบ native placement และ branded caption pack โดยไม่เปลี่ยนผลลัพธ์ฟรีของผู้ใช้</p></div>
+        <div class="revenue-side"><strong>เริ่ม ฿990</strong><span>รอบทดลอง</span><a href="partners.html">ดูแพ็กเกจ →</a></div>
+      </article>
+    </section>
+
     <section class="discover">
       <div class="discover-head">
-        <div>
-          <div class="eyebrow">POPULAR MOMENTS</div>
-          <h2>เริ่มจากโมเมนต์ที่คนใช้บ่อย</h2>
-        </div>
+        <div><div class="eyebrow">POPULAR MOMENTS</div><h2>เริ่มจากโมเมนต์ที่คนใช้บ่อย</h2></div>
         <p>ไม่ต้องคิด keyword เอง เลือกสถานการณ์แล้วไปต่อได้เลย</p>
       </div>
       <div class="category-grid">
@@ -83,19 +85,18 @@
     </section>
 
     <section class="positioning card">
-      <div>
-        <div class="eyebrow">WHY THIS EXISTS</div>
-        <h2>ไม่ใช่แค่ “สุ่มคำคม”</h2>
-      </div>
+      <div><div class="eyebrow">WHY THIS EXISTS</div><h2>ไม่ใช่แค่ “สุ่มคำคม”</h2></div>
       <p>เราเริ่มจาก <strong>โมเมนต์จริงที่คนกำลังจะโพสต์</strong> แล้วค่อยปรับโทนและแพลตฟอร์มให้เหมาะ เพื่อให้ได้ประโยคที่หยิบไปใช้ได้ทันทีมากกว่าแคปชั่นทั่วไป</p>
     </section>
 
     <footer>
       <b>แคปชั่นไหนดี?</b>
-      <span>ทำให้การคิดแคปชั่นเป็นเรื่อง 10 วินาที</span>
+      <span><a href="about.html">About</a> · <a href="privacy.html">Privacy</a> · <a href="partners.html">Partner</a></span>
     </footer>
   </main>
   <div id="toast" class="toast" role="status"></div>
+  <script src="monetization.js"></script>
   <script src="app.js"></script>
+  <script src="revenue.js"></script>
 </body>
 </html>
