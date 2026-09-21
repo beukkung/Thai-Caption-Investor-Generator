@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beukkung.github.io/Thai-Caption-Investor-Generator/sitemap.xml
