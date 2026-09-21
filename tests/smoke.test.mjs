@@ -23,11 +23,10 @@ for(const script of ['app.js','monetization.js','revenue.js']){
 
 const config=fs.readFileSync('monetization.js','utf8');
 if(!config.includes('adsense')) throw new Error('AdSense config missing');
-if(!config.includes('s.shopee.co.th')) throw new Error('Shopee affiliate URL validation missing from config documentation expectation');
-
 const revenue=fs.readFileSync('revenue.js','utf8');
 if(!revenue.includes('pagead2.googlesyndication.com')) throw new Error('AdSense loader missing');
 if(!revenue.includes('SHOPEE PICKS')) throw new Error('Shopee affiliate renderer missing');
+if(!revenue.includes('s\\.shopee\\.co\\.th')) throw new Error('Shopee affiliate URL validation missing');
 
 for(const file of requiredFiles.filter(f=>f.startsWith('caption-'))){
   const page=fs.readFileSync(file,'utf8');
