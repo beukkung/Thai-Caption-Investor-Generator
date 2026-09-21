@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111111">
+<title>Caption เงินๆ — แคปชั่นเรื่องเงินที่พร้อมโพสต์</title>
+<meta name="description" content="สร้างแคปชั่นไทยเรื่องเงิน งาน ออม ลงทุน และชีวิตมนุษย์เงินเดือนในไม่กี่วินาที">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="shell">
+<header class="hero">
+<div class="eyebrow">THAI MONEY CAPTION LAB</div>
+<h1>เรื่องเงินมันจริงจัง<br><span>แคปชั่นไม่ต้องก็ได้</span></h1>
+<p>เลือกเรื่อง เลือกอารมณ์ แล้วได้แคปชั่นพร้อมโพสต์ในไม่กี่วินาที</p>
+<div class="trust-row"><span>ไม่ต้องสมัคร</span><span>ใช้ฟรี</span><span>พร้อมก๊อป</span></div>
+</header>
+<section class="generator card">
+<div class="field"><label>วันนี้เรื่องอะไร?</label><div id="topics" class="chips"></div></div>
+<div class="field"><label>เอาอารมณ์แบบไหน?</label><div id="tones" class="chips"></div></div>
+<div class="field"><label for="context">เติมบริบทนิดเดียว <span>ไม่ใส่ก็ได้</span></label><input id="context" maxlength="80" placeholder="เช่น โบนัสออก, หุ้นแดงทั้งพอร์ต, เดือนนี้อยากประหยัด"></div>
+<button id="generate" class="primary">สุ่มแคปชั่นให้หน่อย ✨</button>
+</section>
+<section class="result card">
+<div class="result-top"><span class="pill">พร้อมโพสต์</span><button id="refresh" class="ghost">↻ สุ่มใหม่</button></div>
+<blockquote id="caption">เงินเดือนเข้าบัญชีเหมือนแขก VIP — แวะมาแป๊บเดียวแล้วก็ไป</blockquote>
+<div class="actions"><button id="copy" class="secondary">คัดลอก</button><button id="share" class="secondary">แชร์</button></div>
+<small>เพื่อความบันเทิง ไม่ใช่คำแนะนำทางการเงิน</small>
+</section>
+<section class="why"><h2>ใช้ได้มากกว่าแค่สายหุ้น</h2><div class="grid"><article><b>เงินเดือนออก</b><p>โพสต์วัน payday แบบไม่ต้องคิดเอง</p></article><article><b>มนุษย์เงินเดือน</b><p>เรื่องงาน ค่าใช้จ่าย และชีวิตจริง</p></article><article><b>ลงทุน</b><p>ยังมี DNA เดิม แต่พูดภาษาคนมากขึ้น</p></article><article><b>สายฮา</b><p>ส่งเพื่อน แชร์สตอรี่ หรือโพสต์เล่นก็ได้</p></article></div></section>
+</main>
+<div id="toast" class="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
